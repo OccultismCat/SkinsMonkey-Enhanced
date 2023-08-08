@@ -57,7 +57,7 @@
                                         var giveaway_entries_list_free_entry_claim_button = giveaway_entries_list_free_entry.children[1].children[0].children[1].children[0].children[0]
                                         var close_giveaway_list_button = document.querySelector("#__layout > div > div.modal.modal--free-giveaway > div > div > div > div > div.modal__close")
                                         if (locate_element(giveaway_entries_list_free_entry_claim_button) == true){
-                                            console.log(giveaway_entries_list_free_entry_claim_button)
+                                            //console.log(giveaway_entries_list_free_entry_claim_button)
                                             if (giveaway_entries_list_free_entry_claim_button.textContent.match(/Next Claim/) != null){
                                                 giveaway_entries_list_free_entry_claim_button.style = 'background-color: red;'
                                                 giveaway_enhanced_button.style.color = 'red';
@@ -76,12 +76,9 @@
                             }
                         } else {
                             clearInterval(join_entries);
-                            console.log('Cleared Interval')
                         }
                     }, 500)
                 }
-                console.log('Adding Enhanced Button!')
-                console.log(giveaway_enhanced_button)
                 giveaway.appendChild(giveaway_enhanced_button)
             })
         }
