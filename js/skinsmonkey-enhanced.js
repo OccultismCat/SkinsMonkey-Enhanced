@@ -6,11 +6,11 @@
 // @author       OccultismCat
 // @license      CC-BY-ND-4.0
 // @github       https://github.com/OccultismCat/SkinsMonkey-Enhanced/
-// @homepage     https://greasyfork.org/en/scripts/
+// @homepage     https://greasyfork.org/en/scripts/472727-skinsmonkey-enhanced
 // @supportURL   https://github.com/OccultismCat/SkinsMonkey-Enhanced/issues
-// @installURL   https://greasyfork.org/scripts/
-// @updateURL    null
-// @downloadURL  null
+// @installURL   https://greasyfork.org/scripts/472727-skinsmonkey-enhanced/code/SkinsMonkey%20Enhanced.user.js
+// @updateURL    https://raw.githubusercontent.com/OccultismCat/SkinsMonkey-Enhanced/main/js/skinsmonkey-enhanced.js
+// @downloadURL  https://raw.githubusercontent.com/OccultismCat/SkinsMonkey-Enhanced/main/js/skinsmonkey-enhanced.js
 // @icon         https://skinsmonkey.com/_nuxt/img/logo-mini.96678c5.svg
 // @match        https://skinsmonkey.com/free-csgo-skins
 // ==/UserScript==
@@ -60,6 +60,7 @@
                                             //console.log(giveaway_entries_list_free_entry_claim_button)
                                             if (giveaway_entries_list_free_entry_claim_button.textContent.match(/Next Claim/) != null){
                                                 giveaway_entries_list_free_entry_claim_button.style = 'background-color: red;'
+                                                giveaway_enhanced_button.textContent = giveaway_entries_list_free_entry_claim_button.textContent
                                                 giveaway_enhanced_button.style.color = 'red';
                                             } else {
                                                 giveaway_entries_list_free_entry_claim_button.style = 'background-color: gold;'
@@ -67,7 +68,6 @@
                                             }
                                             setTimeout(function() {
                                                 close_giveaway_list_button.click();
-                                                giveaway_enhanced_button.textContent = giveaway_entries_list_free_entry_claim_button.textContent
                                             }, 1000)
                                         }
                                     }, 250)
