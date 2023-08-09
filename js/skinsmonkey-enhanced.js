@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         SkinsMonkey Enhanced
 // @namespace    https://github.com/OccultismCat/SkinsMonkey-Enhanced/
-// @version      0.0.1
+// @version      0.0.2
 // @description  Make improvements to steamcommunity.com/market.
 // @author       OccultismCat
 // @license      CC-BY-ND-4.0
@@ -33,6 +33,11 @@
         if (locate_element(giveaway_grid) == true){
             var giveaway_array = Array.from(giveaway_grid.children)
             giveaway_array.forEach(function(giveaway){
+                var giveaway_item_image = giveaway.children[0]
+                if (locate_element(giveaway_item_image) == true){
+                    giveaway_item_image.children[0].setAttribute('src', 'https://media.discordapp.net/attachments/1137001499021541507/1138521096610643990/skinsmonkey-icon.png')
+                    giveaway_item_image.children[1].className = 'container fa-beat free-giveaway-image__main item-image loaded';
+                }
                 var giveaway_join_button = giveaway.children[1].children[1].children[1]
                 giveaway_join_buttons.push(giveaway_join_button)
                 var giveaway_enhanced_button = document.createElement('button')
@@ -59,11 +64,13 @@
                                         if (locate_element(giveaway_entries_list_free_entry_claim_button) == true){
                                             //console.log(giveaway_entries_list_free_entry_claim_button)
                                             if (giveaway_entries_list_free_entry_claim_button.textContent.match(/Next Claim/) != null){
-                                                giveaway_entries_list_free_entry_claim_button.style = 'background-color: red;'
-                                                giveaway_enhanced_button.textContent = giveaway_entries_list_free_entry_claim_button.textContent
+                                                giveaway_entries_list_free_entry_claim_button.style = 'background-color: red;';
+                                                giveaway_enhanced_button.textContent = giveaway_entries_list_free_entry_claim_button.textContent;
                                                 giveaway_enhanced_button.style.color = 'red';
                                             } else {
-                                                giveaway_entries_list_free_entry_claim_button.style = 'background-color: gold;'
+                                                giveaway_entries_list_free_entry_claim_button.style = 'background-color: gold;';
+                                                giveaway_enhanced_button.textContent = 'Joined Giveaway!';
+                                                giveaway_enhanced_button.style.color = 'gold';
                                                 giveaway_entries_list_free_entry_claim_button.click();
                                             }
                                             setTimeout(function() {
