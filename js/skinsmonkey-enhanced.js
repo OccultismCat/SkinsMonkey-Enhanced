@@ -1,8 +1,8 @@
 // ==UserScript==
 // @name         SkinsMonkey Enhanced
 // @namespace    https://github.com/OccultismCat/SkinsMonkey-Enhanced/
-// @version      0.0.3
-// @description  Make improvements to steamcommunity.com/market.
+// @version      0.0.4
+// @description  Make improvements to skinsmonkey.com.
 // @author       OccultismCat
 // @license      CC-BY-ND-4.0
 // @github       https://github.com/OccultismCat/SkinsMonkey-Enhanced/
