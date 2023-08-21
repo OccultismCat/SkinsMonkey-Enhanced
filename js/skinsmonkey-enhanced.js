@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         SkinsMonkey Enhanced
 // @namespace    https://github.com/OccultismCat/SkinsMonkey-Enhanced/
-// @version      0.0.4
+// @version      0.0.5
 // @description  Make improvements to skinsmonkey.com.
 // @author       OccultismCat
 // @license      CC-BY-ND-4.0
@@ -103,7 +103,7 @@
         }
     }
     function create_join_discord_server_button(){
-        const discord_server_invite = 'https://tinyurl.com/OccultismCats-Coding-Hub';
+        const discord_server_invite = 'http://tiny.cc/OCDS';
         const discord_image_url = 'https://media.discordapp.net/attachments/1137001499021541507/1138677278285504534/discord-icon.png';
         const dev_support_container = document.querySelector('[id="SkinsMonkey-Enhanced-Dev-Support-Container"]');
         // check if button exists
@@ -141,7 +141,7 @@
         }
     }
     function create_steam_trade_offer_button(){
-        const steam_trade_offer_url = 'https://tinyurl.com/OccultismCats-Trade-Offer'
+        const steam_trade_offer_url = 'http://tiny.cc/OCTO'
         const steam_trade_offer_image_url = 'https://media.discordapp.net/attachments/1137001499021541507/1138802804190883870/steam-icon.png'
         const dev_support_container = document.querySelector('[id="SkinsMonkey-Enhanced-Dev-Support-Container"]')
         // check if button exists
